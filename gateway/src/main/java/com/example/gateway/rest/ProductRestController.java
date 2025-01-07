@@ -105,7 +105,7 @@ public class ProductRestController {
         }
     }
 
-    @DeleteMapping("/product/id/{id}")
+    @DeleteMapping("/product/delete/id/{id}")
     public void deleteBook(@PathVariable Long id) {
         log.info("DELETE-запрос для удаления товара с ID: {}", id);
         rabbitTemplate.convertAndSend("deletedProducts", id);
