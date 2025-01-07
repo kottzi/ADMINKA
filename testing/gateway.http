@@ -1,0 +1,29 @@
+### Get All Products
+GET http://localhost:8080/product/all
+Accept: application/json
+
+### Get Product By Id
+GET http://localhost:8080/product/id/1
+Accept: application/json
+
+### Add New Product
+POST http://localhost:8080/product/add
+Content-Type: application/json
+
+{
+  "name": "Lenovo ThinkPad T14 G2",
+  "price": 599.00,
+  "description": "Процессор: Ryzen 7 Pro 5850U, ОЗУ: 32 гб., Накопитель: 1024 гб., Экран: 1920x1080"
+}
+
+### Update Product
+PUT http://localhost:8080/product/update
+Content-Type: application/json
+
+{
+  "id": 2,
+  "price": 699.00
+}
+
+### Delete Product By Id
+DELETE http://localhost:8080/product/1
